@@ -51,4 +51,22 @@ public class Collecting : MonoBehaviour
         if (coinText != null)
             coinText.text = coinCount.ToString();
     }
+
+    public bool DecreaseHeart()
+    {
+        if (heartCount > 0)
+        {
+            heartCount--;
+            UpdateUI();
+            return true;
+        }
+        return false;
+    }
+
+
+    public int GetHeartCount()
+    {
+        return heartCount;
+    }
+
 }
